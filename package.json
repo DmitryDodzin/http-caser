@@ -1,0 +1,42 @@
+{
+  "name": "http-caser",
+  "version": "0.1.0",
+  "description": "Http-Caser caseify your node-fetch responces",
+  "main": "dist/http-caser",
+  "scripts": {
+    "clean": "rm -rf dist docs",
+    "prebuild": "npm run clean",
+    "test": "mocha --compilers js:babel-core/register",
+    "build": "babel lib --out-dir dist",
+    "cover": "cross-env NODE_ENV=test nyc mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmitryDodzin/http-caser.git"
+  },
+  "author": "Dmitry Dodzin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DmitryDodzin/http-caser/issues"
+  },
+  "homepage": "https://github.com/DmitryDodzin/http-caser#readme",
+  "peerDependencies": {
+    "node-fetch": "1.x"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-istanbul": "^4.1.5",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "coveralls": "^3.0.0",
+    "cross-env": "^5.0.5",
+    "fetch-mock": "^5.13.1",
+    "mocha": "^3.5.3",
+    "nyc": "^11.2.1",
+    "sinon": "^4.0.0"
+  }
+}
